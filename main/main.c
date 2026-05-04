@@ -8,6 +8,7 @@
 #include "http_sender.h"
 #include "data_buffer.h"
 #include "time_manager.h"
+#include "can_driver.h"
 
 #define WIFI_SSID     "kankel"
 #define WIFI_PASSWORD "tu_contraseña"
@@ -35,10 +36,29 @@ void app_main(void) {
     while (1) {
         // Leer datos del motor (simulados por ahora)
         EngineData data = {0};
-        parse_pid(0x0C, 0x1F, 0x40, &data);
-        parse_pid(0x0D, 0x5A, 0x00, &data);
-        parse_pid(0x05, 0x7D, 0x00, &data);
-        parse_pid(0x2F, 0x72, 0x00, &data);
+        
+        // PIDs que queremos leer
+        uint8_t pids_to_read[] = {0x0C, 0x0D, 0x05, 0x2F};
+        
+        for (int i = 0; i < 4; i++) {
+            uint8_t current_pid = pids_to_read[i];
+            
+            // 1. Pedimos el PID al motor
+            if (can_request_pid(current_pid) == 0) {
+                
+                uint8_t r_pid, r_A, r_B;
+                // 2. Esperamos y leemos la respuesta
+                if (can_receive_data(&r_pid, &r_A, &r_B) == 0) {
+                    
+                    // 3. Pasamos los bytes crudos a tu parser matemático
+                    if (r_pid == current_pid) {
+                        parse_pid(r_pid, r_A, r_B, &data);
+                    }
+                }
+            }
+            // Pequeña pausa entre preguntas para no saturar la computadora del auto (muy importante en la realidad)
+            vTaskDelay(pdMS_TO_TICKS(50)); 
+        }
 
         // Obtener timestamp real
         long timestamp = time_get_timestamp();
