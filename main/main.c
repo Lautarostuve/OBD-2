@@ -7,11 +7,13 @@
 #include "wifi_manager.h"
 #include "http_sender.h"
 #include "data_buffer.h"
+#include "time_manager.h"
 
 #define WIFI_SSID     "kankel"
 #define WIFI_PASSWORD "tu_contraseña"
 #define BACKEND_URL   "https://webhook.site/0ad20dae-8432-4d7a-9a57-112d02a5b900"
 #define VEHICLE_ID    "ABC-123"
+#define MAX_HTTP_RETRIES 3
 
 static const char *TAG = "main";
 
@@ -24,7 +26,11 @@ void app_main(void) {
         return;
     }
 
-    long timestamp = 1713374200;
+    // Sincronizar hora con NTP
+    ESP_LOGI(TAG, "Sincronizando hora...");
+    if (time_sync() != 0) {
+        ESP_LOGW(TAG, "Sin hora NTP, usando timestamp 0");
+    }
 
     while (1) {
         // Leer datos del motor (simulados por ahora)
@@ -34,32 +40,58 @@ void app_main(void) {
         parse_pid(0x05, 0x7D, 0x00, &data);
         parse_pid(0x2F, 0x72, 0x00, &data);
 
+        // Obtener timestamp real
+        long timestamp = time_get_timestamp();
+
         // Guardar lectura en el buffer
         buffer_push(&data, VEHICLE_ID, timestamp);
-        timestamp += 5; // simula el paso del tiempo
 
-        // Mandar cuando el buffer este lleno o haya conexion
-        if (buffer_is_full() || wifi_is_connected()) {
-            ESP_LOGI(TAG, "Enviando %d lecturas al backend...", buffer_count());
+        // Solo intenta enviar si hay red Y hay al menos una lectura en el buffer
+        if (wifi_is_connected() && !buffer_is_empty()) {
+            int items_to_send = buffer_count();
+            ESP_LOGI(TAG, "Iniciando ráfaga: intentando enviar %d lecturas...", items_to_send);
 
             char json_output[JSON_BUFFER_SIZE];
+            int successfully_sent = 0;
 
-            for (int i = 0; i < buffer_count(); i++) {
+            for (int i = 0; i < items_to_send; i++) {
                 const BufferedReading *reading = buffer_get(i);
 
-                int result = build_json(&reading->data, reading->vehicle_id,
-                                        reading->timestamp, json_output, JSON_BUFFER_SIZE);
+                if (build_json(&reading->data, reading->vehicle_id, 
+                            reading->timestamp, json_output, JSON_BUFFER_SIZE) == 0) {
+                    
+                    int attempt = 0;
+                    int sent_ok = 0;
 
-                if (result == 0) {
-                    http_post_json(BACKEND_URL, json_output);
+                    // Bucle de reintentos para CADA lectura
+                    while (attempt < MAX_HTTP_RETRIES && !sent_ok) {
+                        if (http_post_json(BACKEND_URL, json_output) == 0) {
+                            sent_ok = 1; 
+                        } else {
+                            attempt++;
+                            ESP_LOGW(TAG, "Error en POST. Intento %d/%d fallido...", attempt, MAX_HTTP_RETRIES);
+                            if (attempt < MAX_HTTP_RETRIES) {
+                                vTaskDelay(pdMS_TO_TICKS(1000)); // Pausa de 1 seg antes de reintentar
+                            }
+                        }
+                    }
+
+                    if (sent_ok) {
+                        successfully_sent++;
+                    } else {
+                        // Si falló 3 veces seguidas, asumimos que se cayó el Wi-Fi o el Backend.
+                        ESP_LOGE(TAG, "Fallo definitivo tras %d intentos. Abortando ráfaga para no perder datos.", MAX_HTTP_RETRIES);
+                        break; // Cortamos el 'for'. Los datos restantes quedan seguros en el array.
+                    }
                 }
             }
 
-            // Limpiar buffer después de mandar
-            buffer_clear();
+            // Actualizamos el buffer borrando SOLO los que llegaron al servidor
+            if (successfully_sent > 0) {
+                buffer_remove_first_n(successfully_sent);
+            }
         }
 
-        // Esperar 5 segundos antes de la próxima lectura
         vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }

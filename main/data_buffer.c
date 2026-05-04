@@ -46,3 +46,21 @@ void buffer_clear(void) {
     count = 0;
     ESP_LOGI(TAG, "Buffer vaciado");
 }
+
+
+void buffer_remove_first_n(int n) {
+    if (n <= 0) return;
+    
+    // Si enviamos todos, simplemente limpiamos el contador
+    if (n >= count) {
+        buffer_clear();
+        return;
+    }
+    
+    // Desplazar los elementos no enviados al principio del array
+    // memmove es seguro incluso si las zonas de memoria se solapan
+    memmove(&readings[0], &readings[n], (count - n) * sizeof(BufferedReading));
+    
+    count -= n; // Actualizamos la cantidad de elementos restantes
+    ESP_LOGI(TAG, "Buffer actualizado: %d elementos enviados, %d restantes en cola", n, count);
+}

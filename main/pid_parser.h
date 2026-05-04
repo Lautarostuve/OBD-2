@@ -4,6 +4,17 @@
 #include <stdint.h>
 
 // Estructura que contiene todos los datos del motor
+
+// NOTA IMPORTANTE para cuando se integre con ISO-TP:
+// La respuesta cruda del auto tiene el formato:
+// [0] = cantidad de bytes utiles
+// [1] = 0x41 (respuesta modo 01)
+// [2] = PID consultado
+// [3] = Byte A (primer dato)
+// [4] = Byte B (segundo dato, usado en RPM)
+// Ejemplo: 04 41 0C 1F 40 → RPM = (0x1F * 256 + 0x40) / 4 = 2000
+
+
 typedef struct {
     float speed;        // km/h
     float rpm;          // revoluciones por minuto

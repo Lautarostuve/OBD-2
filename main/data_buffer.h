@@ -32,4 +32,8 @@ const BufferedReading *buffer_get(int index);
 // Limpia el buffer después de mandar los datos
 void buffer_clear(void);
 
+
+// Elimina los primeros N elementos del buffer (útil tras envío parcial)
+void buffer_remove_first_n(int n);
+
 #endif

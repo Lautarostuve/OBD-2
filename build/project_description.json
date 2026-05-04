@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "obd2_reader",
-    "project_version":    "5c5720f-dirty",
+    "project_version":    "3c1ff25-dirty",
     "project_path":       "C:/utn/utn2026/Industriales/obd2_reader",
     "idf_path":           "C:/esp/v5.2.6/esp-idf",
     "build_dir":          "C:/utn/utn2026/Industriales/obd2_reader/build",
@@ -805,7 +805,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/utn/utn2026/Industriales/obd2_reader/main/http_sender.c", "C:/utn/utn2026/Industriales/obd2_reader/main/wifi_manager.c", "C:/utn/utn2026/Industriales/obd2_reader/main/main.c", "C:/utn/utn2026/Industriales/obd2_reader/main/pid_parser.c", "C:/utn/utn2026/Industriales/obd2_reader/main/json_builder.c", "C:/utn/utn2026/Industriales/obd2_reader/main/data_buffer.c" ],
+            "sources": [ "C:/utn/utn2026/Industriales/obd2_reader/main/time_manager.c", "C:/utn/utn2026/Industriales/obd2_reader/main/http_sender.c", "C:/utn/utn2026/Industriales/obd2_reader/main/wifi_manager.c", "C:/utn/utn2026/Industriales/obd2_reader/main/main.c", "C:/utn/utn2026/Industriales/obd2_reader/main/pid_parser.c", "C:/utn/utn2026/Industriales/obd2_reader/main/json_builder.c", "C:/utn/utn2026/Industriales/obd2_reader/main/data_buffer.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
