@@ -4,7 +4,7 @@
 #include "pid_parser.h"
 
 // Maximo de lecturas que se pueden acumular
-#define BUFFER_MAX_SIZE 10
+#define BUFFER_MAX_SIZE 14000
 
 // Una lectura completa con timestamp
 typedef struct {
@@ -35,5 +35,8 @@ void buffer_clear(void);
 
 // Elimina los primeros N elementos del buffer (útil tras envío parcial)
 void buffer_remove_first_n(int n);
+
+
+int buffer_init(void);
 
 #endif

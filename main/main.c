@@ -10,15 +10,20 @@
 #include "time_manager.h"
 #include "can_driver.h"
 
-#define WIFI_SSID     "kankel"
-#define WIFI_PASSWORD "tu_contraseña"
+#define WIFI_SSID     "kankel-2.4Ghz"
+#define WIFI_PASSWORD "indio22280"
 #define BACKEND_URL   "https://webhook.site/0ad20dae-8432-4d7a-9a57-112d02a5b900"
 #define VEHICLE_ID    "ABC-123"
 #define MAX_HTTP_RETRIES 3
 
+
+#define SIMULATE_NO_WIFI 0 // Cambia a 1 para probar el buffer sin Wi-Fi
+
 static const char *TAG = "main";
 
 void app_main(void) {
+
+    buffer_init();
 
     // Conectar al Wi-Fi
     ESP_LOGI(TAG, "Conectando al Wi-Fi...");
@@ -67,7 +72,7 @@ void app_main(void) {
         buffer_push(&data, VEHICLE_ID, timestamp);
 
         // Solo intenta enviar si hay red Y hay al menos una lectura en el buffer
-        if (wifi_is_connected() && !buffer_is_empty()) {
+        if (wifi_is_connected() && !buffer_is_empty() && !SIMULATE_NO_WIFI) {
             int items_to_send = buffer_count();
             ESP_LOGI(TAG, "Iniciando ráfaga: intentando enviar %d lecturas...", items_to_send);
 

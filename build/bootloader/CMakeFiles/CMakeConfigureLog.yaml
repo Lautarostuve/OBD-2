@@ -20,8 +20,8 @@ events:
       - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe 
-      Build flags: -mlongcalls;-Wno-frame-address;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy
+      Compiler: C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe 
+      Build flags: -mlongcalls;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy
       Id flags:  
       
       The output was:
@@ -43,8 +43,8 @@ events:
       - "CMakeLists.txt:66 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe 
-      Build flags: -mlongcalls;-Wno-frame-address;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy
+      Compiler: C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++.exe 
+      Build flags: -mlongcalls;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy
       Id flags:  
       
       The output was:
@@ -80,10 +80,10 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q97mt6"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q97mt6"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-50e9uh"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-50e9uh"
     cmakeVariables:
-      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/esp/v5.2.6/esp-idf/tools/cmake;C:/esp/v5.2.6/esp-idf/tools/cmake/third_party"
@@ -91,10 +91,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q97mt6'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-50e9uh'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_2cb4e
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_34d05
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe
         Target: xtensa-esp-elf
@@ -102,8 +102,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2cb4e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccPdLq34.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_34d05.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccrrCLPz.s
         GNU C17 (crosstool-NG esp-13.2.0_20250707) version 13.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -120,12 +120,12 @@ events:
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: 7a4b6e617098dfbafdb75c8b4626f366
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccPdLq34.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccrrCLPz.s
         COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
-        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -o cmTC_2cb4e   && cd ."
+        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/\x0d
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -o cmTC_34d05   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe
         COLLECT_LTO_WRAPPER=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe
@@ -135,10 +135,10 @@ events:
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) 
         COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
-        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_2cb4e' '-dumpdir' 'cmTC_2cb4e.'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\cc2Hto6i.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_2cb4e C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o\x0d
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_2cb4e' '-dumpdir' 'cmTC_2cb4e.'\x0d
+        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_34d05' '-dumpdir' 'cmTC_34d05.'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccm8Opwc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_34d05 C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o\x0d
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_34d05' '-dumpdir' 'cmTC_34d05.'\x0d
         
       exitCode: 0
   -
@@ -173,10 +173,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q97mt6']
+        ignore line: [Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-50e9uh']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_2cb4e]
-        ignore line: [[1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_34d05]
+        ignore line: [[1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe]
         ignore line: [Target: xtensa-esp-elf]
@@ -184,8 +184,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/']
-        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_2cb4e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccPdLq34.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/']
+        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1.exe -quiet -v -imultilib esp32s3 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_34d05.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccrrCLPz.s]
         ignore line: [GNU C17 (crosstool-NG esp-13.2.0_20250707) version 13.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -202,21 +202,21 @@ events:
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 7a4b6e617098dfbafdb75c8b4626f366]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/']
-        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccPdLq34.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/']
+        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccrrCLPz.s]
         ignore line: [COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
-        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/]
+        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -o cmTC_2cb4e   && cd ."]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -o cmTC_34d05   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe]
@@ -228,68 +228,68 @@ events:
         ignore line: [COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
-        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/]
+        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_2cb4e' '-dumpdir' 'cmTC_2cb4e.']
-        link line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\cc2Hto6i.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_2cb4e C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_34d05' '-dumpdir' 'cmTC_34d05.']
+        link line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccm8Opwc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_34d05 C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o\x0d]
           arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\cc2Hto6i.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccm8Opwc.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [--sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
-          arg [--dynconfig=xtensa_esp32.so] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_2cb4e] ==> ignore
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
+          arg [cmTC_34d05] ==> ignore
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_2cb4e.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_34d05.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
           arg [-lc] ==> lib [c]
           arg [-lgcc] ==> lib [gcc]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_2cb4e' '-dumpdir' 'cmTC_2cb4e.'\x0d]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_34d05' '-dumpdir' 'cmTC_34d05.'\x0d]
         ignore line: []
         ignore line: []
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32/crt0.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/crt0.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit libs: [gcc;c;nosys;c;gcc]
-        implicit objs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32/crt0.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        implicit dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit objs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/crt0.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        implicit dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit fwks: []
       
       
@@ -303,10 +303,10 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3ydeog"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3ydeog"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3hu4ny"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3hu4ny"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_CXX_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -315,10 +315,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3ydeog'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3hu4ny'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_0402d
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-g++.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_556f6
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe
         Target: xtensa-esp-elf
@@ -326,14 +326,14 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0402d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccHOjdUl.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_556f6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccVNuyah.s
         GNU C++17 (crosstool-NG esp-13.2.0_20250707) version 13.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 6.3.0 20170516, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0"
-        ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32"
+        ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3"
         ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward"
         ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/include"
         ignoring nonexistent directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/../../../../include"
@@ -343,19 +343,19 @@ events:
         #include "..." search starts here:
         #include <...> search starts here:
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include-fixed
          C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: 178af6bf0b6f47328f7f7473a5176c72
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccHOjdUl.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccVNuyah.s
         COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
-        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0402d   && cd ."
+        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_556f6   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe
         COLLECT_LTO_WRAPPER=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe
@@ -365,10 +365,10 @@ events:
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) 
         COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/
-        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_0402d' '-dumpdir' 'cmTC_0402d.'
-         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccfOcytC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_0402d C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o\x0d
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_0402d' '-dumpdir' 'cmTC_0402d.'\x0d
+        LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_556f6' '-dumpdir' 'cmTC_556f6.'
+         C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccL2tRES.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_556f6 C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o\x0d
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_556f6' '-dumpdir' 'cmTC_556f6.'\x0d
         
       exitCode: 0
   -
@@ -383,19 +383,19 @@ events:
         found start of include info
         found start of implicit include info
           add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0]
-          add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32]
+          add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3]
           add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward]
           add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include]
           add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include-fixed]
           add: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include]
         end of search list found
         collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0]
-        collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32]
+        collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3]
         collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/backward]
         collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include]
         collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include-fixed] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include-fixed]
         collapse include dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include]
-        implicit include dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/backward;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include-fixed;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include]
+        implicit include dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include/c++/13.2.0/backward;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include-fixed;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/include]
       
       
   -
@@ -409,10 +409,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3ydeog']
+        ignore line: [Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3hu4ny']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_0402d]
-        ignore line: [[1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-g++.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_556f6]
+        ignore line: [[1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe]
         ignore line: [Target: xtensa-esp-elf]
@@ -420,14 +420,14 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20250707) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/']
-        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0402d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccHOjdUl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/']
+        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/cc1plus.exe -quiet -v -imultilib esp32s3 -iprefix C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/ -isysroot C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf C:/Espressif/tools/cmake/3.30.2/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_556f6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32s3.so -mlongcalls -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o C:\\Users\\lauta\\AppData\\Local\\Temp\\ccVNuyah.s]
         ignore line: [GNU C++17 (crosstool-NG esp-13.2.0_20250707) version 13.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 6.3.0 20170516  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0"]
-        ignore line: [ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32"]
+        ignore line: [ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3"]
         ignore line: [ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward"]
         ignore line: [ignoring duplicate directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/../../lib/gcc/xtensa-esp-elf/13.2.0/include"]
         ignore line: [ignoring nonexistent directory "C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/builds/idf/crosstool-NG/builds/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/../../../../include"]
@@ -437,28 +437,28 @@ events:
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0]
-        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32]
+        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/xtensa-esp-elf/esp32s3]
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include/c++/13.2.0/backward]
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include]
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/include-fixed]
         ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 178af6bf0b6f47328f7f7473a5176c72]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/']
-        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccHOjdUl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/']
+        ignore line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/as.exe --traditional-format --longcalls --dynconfig=xtensa_esp32s3.so -o CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lauta\\AppData\\Local\\Temp\\ccVNuyah.s]
         ignore line: [COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
-        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/]
+        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0402d   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-g++.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -v CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_556f6   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp-elf-g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe]
@@ -470,42 +470,42 @@ events:
         ignore line: [COMPILER_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/bin/]
-        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/]
-        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/]
+        ignore line: [LIBRARY_PATH=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/]
+        ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/]
         ignore line: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_0402d' '-dumpdir' 'cmTC_0402d.']
-        link line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccfOcytC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_0402d C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_556f6' '-dumpdir' 'cmTC_556f6.']
+        link line: [ C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe -plugin C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccL2tRES.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32s3.so -o cmTC_556f6 C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0 -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o\x0d]
           arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/13.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccfOcytC.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\lauta\\AppData\\Local\\Temp\\ccL2tRES.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [--sysroot=C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
-          arg [--dynconfig=xtensa_esp32.so] ==> ignore
+          arg [--dynconfig=xtensa_esp32s3.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_0402d] ==> ignore
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32]
-          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
+          arg [cmTC_556f6] ==> ignore
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3]
+          arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-LC:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_0402d.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_556f6.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc] ==> lib [gcc]
@@ -513,27 +513,27 @@ events:
           arg [-lnosys] ==> lib [nosys]
           arg [-lc] ==> lib [c]
           arg [-lgcc] ==> lib [gcc]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o]
-          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_0402d' '-dumpdir' 'cmTC_0402d.'\x0d]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o]
+          arg [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o] ==> obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32s3.so' '-mlongcalls' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'cmTC_556f6' '-dumpdir' 'cmTC_556f6.'\x0d]
         ignore line: []
         ignore line: []
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32/crt0.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32/crt0.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o]
-        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
-        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3/crt0.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/crt0.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o]
+        collapse obj [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3]
+        collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32s3] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/13.2.0/../../../../xtensa-esp-elf/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib]
         collapse library dir [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit libs: [stdc++;m;gcc;c;nosys;c;gcc]
-        implicit objs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32/crt0.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crti.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtbegin.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtend.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32/crtn.o]
-        implicit dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
+        implicit objs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3/crt0.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crti.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtbegin.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtend.o;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3/crtn.o]
+        implicit dirs: [C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/esp32s3;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib/esp32s3;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/lib/gcc;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/lib;C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20250707/xtensa-esp-elf/xtensa-esp-elf/usr/lib]
         implicit fwks: []
       
       
@@ -546,10 +546,10 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-p7511v"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-p7511v"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-vz7kcw"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-vz7kcw"
     cmakeVariables:
-      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/esp/v5.2.6/esp-idf/tools/cmake;C:/esp/v5.2.6/esp-idf/tools/cmake/third_party"
@@ -557,11 +557,11 @@ events:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-p7511v'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-vz7kcw'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_9763f
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_9763f.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-p7511v/CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_9763f.dir/CheckIncludeFile.c.obj -o cmTC_9763f   && cd ."
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_b933e
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_b933e.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-vz7kcw/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_b933e.dir/CheckIncludeFile.c.obj -o cmTC_b933e   && cd ."
         
       exitCode: 0
   -
@@ -573,10 +573,10 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-gr15i4"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-gr15i4"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jkxp3d"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jkxp3d"
     cmakeVariables:
-      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/esp/v5.2.6/esp-idf/tools/cmake;C:/esp/v5.2.6/esp-idf/tools/cmake/third_party"
@@ -584,11 +584,11 @@ events:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-gr15i4'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jkxp3d'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_32975
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_32975.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-gr15i4/CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_32975.dir/CheckIncludeFile.c.obj -o cmTC_32975   && cd ."
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_1506e
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_1506e.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jkxp3d/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_1506e.dir/CheckIncludeFile.c.obj -o cmTC_1506e   && cd ."
         
       exitCode: 0
   -
@@ -600,10 +600,10 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3g4ld6"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3g4ld6"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-tzumcm"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-tzumcm"
     cmakeVariables:
-      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/esp/v5.2.6/esp-idf/tools/cmake;C:/esp/v5.2.6/esp-idf/tools/cmake/third_party"
@@ -611,11 +611,11 @@ events:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3g4ld6'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-tzumcm'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_e9fad
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_e9fad.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-3g4ld6/CheckIncludeFile.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_e9fad.dir/CheckIncludeFile.c.obj -o cmTC_e9fad   && cd ."
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_b44d4
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_b44d4.dir/CheckIncludeFile.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-tzumcm/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_b44d4.dir/CheckIncludeFile.c.obj -o cmTC_b44d4   && cd ."
         
       exitCode: 0
   -
@@ -627,10 +627,10 @@ events:
     checks:
       - "Check size of time_t"
     directories:
-      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q66t2x"
-      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q66t2x"
+      source: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8ak32x"
+      binary: "C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8ak32x"
     cmakeVariables:
-      CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
+      CMAKE_C_FLAGS: "-mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_MODULE_PATH: "C:/esp/v5.2.6/esp-idf/tools/cmake;C:/esp/v5.2.6/esp-idf/tools/cmake/third_party"
@@ -638,11 +638,11 @@ events:
       variable: "HAVE_TIME_T_SIZE"
       cached: true
       stdout: |
-        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q66t2x'
+        Change Dir: 'C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8ak32x'
         
-        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_df658
-        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_df658.dir/TIME_T_SIZE.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-q66t2x/TIME_T_SIZE.c
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_df658.dir/TIME_T_SIZE.c.obj -o cmTC_df658   && cd ."
+        Run Build Command(s): C:/Espressif/tools/ninja/1.12.1/ninja.exe -v cmTC_52f4d
+        [1/2] C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe   -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_52f4d.dir/TIME_T_SIZE.c.obj -c C:/utn/utn2026/Industriales/obd2_reader/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8ak32x/TIME_T_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Espressif\\tools\\xtensa-esp-elf\\esp-13.2.0_20250707\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy  CMakeFiles/cmTC_52f4d.dir/TIME_T_SIZE.c.obj -o cmTC_52f4d   && cd ."
         
       exitCode: 0
 ...

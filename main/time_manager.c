@@ -4,7 +4,7 @@
 
 // ============================================================
 // SWITCH DE ENTORNO: 1 para QEMU, 0 para ESP32 físico
-#define QEMU_SIMULATION_MODE 1 
+#define QEMU_SIMULATION_MODE 0
 // ============================================================
 
 #if !QEMU_SIMULATION_MODE

@@ -6,7 +6,7 @@
 
 // ============================================================
 // SWITCH DE ENTORNO: Cambiar a 0 cuando tengas el ESP32 real
-#define QEMU_SIMULATION_MODE 1 
+#define QEMU_SIMULATION_MODE 0
 // ============================================================
 
 static const char *TAG = "can_driver";

@@ -60,5 +60,7 @@ C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/mqtt/libmqtt.a
 C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
 C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/perfmon/libperfmon.a
 C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/spiffs/libspiffs.a
+C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/touch_element/libtouch_element.a
+C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/usb/libusb.a
 C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/utn/utn2026/Industriales/obd2_reader/build/esp-idf/main/libmain.a

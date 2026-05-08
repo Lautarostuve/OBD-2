@@ -14,5 +14,6 @@
     "--query-driver=**",
     "--compile-commands-dir=c:\\utn\\utn2026\\Industriales\\obd2_reader\\build"
   ],
-  "idf.flashType": "JTAG"
+  "idf.flashType": "JTAG",
+  "idf.portWin": "COM3"
 }
