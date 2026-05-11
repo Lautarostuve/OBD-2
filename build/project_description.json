@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "obd2_reader",
-    "project_version":    "ea6d14c-dirty",
+    "project_version":    "f66bf0b-dirty",
     "project_path":       "C:/utn/utn2026/Industriales/obd2_reader",
     "idf_path":           "C:/esp/v5.2.6/esp-idf",
     "build_dir":          "C:/utn/utn2026/Industriales/obd2_reader/build",
