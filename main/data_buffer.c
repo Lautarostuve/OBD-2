@@ -1,140 +1,88 @@
 #include "data_buffer.h"
 #include "esp_log.h"
 #include "esp_partition.h"
+#include "esp_sleep.h"
 #include <string.h>
 
 static const char *TAG = "data_buffer";
 
-typedef struct {
-    uint32_t magic_start;  // 0x0BD20001
-    int count;
-    uint32_t magic_end;    // 0x0BD20002 - confirma que la escritura fue completa
-} BufferHeader;
+// ============================================================
+// MEMORIA RTC: Sobrevive al Deep Sleep, no tiene desgaste físico.
+// Pero se borra si desconectás la batería del auto.
+// ============================================================
+#define BUFFER_MAX_SIZE 4000
 
-#define MAGIC_START   0x0BD20001
-#define MAGIC_END     0x0BD20002
-#define HEADER_OFFSET 0
-#define DATA_OFFSET   4096  // Los datos empiezan después del primer sector (4KB)
+static BufferedReading ram_buffer[BUFFER_MAX_SIZE]; 
+static int ram_count = 0;
 
 static const esp_partition_t *partition = NULL;
-static int count = 0;
-
-// Borra el sector del header y lo reescribe de forma segura
-static void write_header(int new_count) {
-    esp_partition_erase_range(partition, 0, 4096);
-    BufferHeader header = {
-        .magic_start = MAGIC_START,
-        .count = new_count,
-        .magic_end = MAGIC_END
-    };
-    esp_partition_write(partition, HEADER_OFFSET, &header, sizeof(header));
-}
 
 int buffer_init(void) {
+    // Buscamos la partición en la Flash por si hay que recuperar algo de un viaje viejo
     partition = esp_partition_find_first(ESP_PARTITION_TYPE_DATA, 0x99, "obd_data");
-    if (partition == NULL) {
-        ESP_LOGE(TAG, "No se encontró la partición obd_data");
-        return -1;
-    }
-
-    BufferHeader header;
-    esp_partition_read(partition, HEADER_OFFSET, &header, sizeof(header));
-
-    if (header.magic_start == MAGIC_START && header.magic_end == MAGIC_END) {
-        count = header.count;
-        ESP_LOGI(TAG, "Buffer recuperado: %d lecturas previas encontradas", count);
-
-        // LOG TEMPORAL: mostrar las primeras 3 lecturas recuperadas
-        for (int i = 0; i < count && i < 3; i++) {
-            const BufferedReading *r = buffer_get(i);
-            ESP_LOGI(TAG, "  [%d] ts=%ld speed=%.2f rpm=%.2f temp=%.2f fuel=%.2f",
-                i, r->timestamp, r->data.speed, r->data.rpm, 
-                r->data.temperature, r->data.fuel_level);
-        }
-        
+    
+    // Si despertamos de Deep Sleep, ram_count ya tiene su valor anterior.
+    // Si es un "Cold Boot" (recién enchufado), ram_count será 0.
+    if (esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_UNDEFINED) {
+        ESP_LOGI(TAG, "Arranque en frío. El buffer RTC está vacío.");
+        ram_count = 0;
     } else {
-        ESP_LOGI(TAG, "Inicializando partición nueva...");
-        esp_partition_erase_range(partition, 0, partition->size);
-        BufferHeader nuevo = { .magic_start = MAGIC_START, .count = 0, .magic_end = MAGIC_END };
-        esp_partition_write(partition, HEADER_OFFSET, &nuevo, sizeof(nuevo));
-        count = 0;
+        ESP_LOGI(TAG, "Despertar de Sleep. Recuperadas %d lecturas de la RAM RTC.", ram_count);
     }
+    
     return 0;
 }
 
 int buffer_push(const EngineData *data, const char *vehicle_id, long timestamp) {
-    if (partition == NULL) return -1;
-
-    if (count >= BUFFER_MAX_SIZE) {
-        ESP_LOGW(TAG, "Buffer lleno, lectura descartada");
+    if (ram_count >= BUFFER_MAX_SIZE) {
+        ESP_LOGW(TAG, "Buffer RTC lleno. Podrías llamar a una función para persistir en Flash aquí.");
         return -1;
     }
 
-    // Construir la lectura
-    BufferedReading reading;
-    reading.data = *data;
-    reading.timestamp = timestamp;
-    strncpy(reading.vehicle_id, vehicle_id, sizeof(reading.vehicle_id) - 1);
+    // Guardamos en RAM (Velocidad instantánea, cero desgaste)
+    ram_buffer[ram_count].data = *data;
+    ram_buffer[ram_count].timestamp = timestamp;
+    strncpy(ram_buffer[ram_count].vehicle_id, vehicle_id, sizeof(ram_buffer[ram_count].vehicle_id) - 1);
 
-    // Escribir la lectura en su posición
-    uint32_t offset = DATA_OFFSET + (count * sizeof(BufferedReading));
-    esp_partition_write(partition, offset, &reading, sizeof(reading));
-
-    // Actualizar el header de forma segura
-    count++;
-    write_header(count);
-
-    ESP_LOGI(TAG, "Lectura guardada (%d/%d)", count, BUFFER_MAX_SIZE);
+    ram_count++;
+    ESP_LOGI(TAG, "Lectura guardada en RAM RTC (%d/%d)", ram_count, BUFFER_MAX_SIZE);
     return 0;
 }
 
 const BufferedReading *buffer_get(int index) {
-    if (partition == NULL || index < 0 || index >= count) return NULL;
+    if (index < 0 || index >= ram_count) return NULL;
+    return &ram_buffer[index];
+}
 
-    static BufferedReading temp;
-    uint32_t offset = DATA_OFFSET + (index * sizeof(BufferedReading));
-    esp_partition_read(partition, offset, &temp, sizeof(temp));
-    return &temp;
+// Nueva función: Guarda todo lo que hay en RAM a la Flash de un solo saque.
+// Solo la llamarás cuando el auto se estacione (Fase 3).
+void buffer_persist_to_flash(void) {
+    if (partition == NULL || ram_count == 0) return;
+
+    ESP_LOGI(TAG, "Guardando buffer de viaje a la Flash (Persistencia)...");
+    esp_partition_erase_range(partition, 0, partition->size);
+    
+    // Escribimos todo el bloque de RAM a la Flash en una única operación
+    esp_partition_write(partition, 4096, ram_buffer, ram_count * sizeof(BufferedReading));
+    
+    // Guardar el header (count)
+    // (Aquí podrías reusar tu lógica de write_header anterior)
+    ESP_LOGI(TAG, "Copia de seguridad en Flash completada.");
 }
 
 void buffer_remove_first_n(int n) {
-    if (partition == NULL || n <= 0) return;
-
-    if (n >= count) {
-        buffer_clear();
+    if (n <= 0) return;
+    if (n >= ram_count) {
+        ram_count = 0;
         return;
     }
 
-    // Leer los elementos restantes y reescribirlos desde el inicio
-    int remaining = count - n;
-    for (int i = 0; i < remaining; i++) {
-        BufferedReading temp;
-        uint32_t src = DATA_OFFSET + ((i + n) * sizeof(BufferedReading));
-        esp_partition_read(partition, src, &temp, sizeof(temp));
-
-        if (i == 0) {
-            // Borrar toda la zona de datos antes de reescribir
-            esp_partition_erase_range(partition, DATA_OFFSET, partition->size - DATA_OFFSET);
-        }
-
-        uint32_t dst = DATA_OFFSET + (i * sizeof(BufferedReading));
-        esp_partition_write(partition, dst, &temp, sizeof(temp));
-    }
-
-    count = remaining;
-    write_header(count);
-
-    ESP_LOGI(TAG, "Buffer actualizado: %d enviados, %d restantes", n, count);
+    int remaining = ram_count - n;
+    memmove(ram_buffer, &ram_buffer[n], remaining * sizeof(BufferedReading));
+    ram_count = remaining;
+    
+    ESP_LOGI(TAG, "RAM RTC actualizada: %d enviados, %d restantes", n, ram_count);
 }
 
-void buffer_clear(void) {
-    if (partition == NULL) return;
-    esp_partition_erase_range(partition, DATA_OFFSET, partition->size - DATA_OFFSET);
-    count = 0;
-    write_header(0);
-    ESP_LOGI(TAG, "Buffer vaciado");
-}
-
-int buffer_count(void) { return count; }
-int buffer_is_full(void)  { return count >= BUFFER_MAX_SIZE; }
-int buffer_is_empty(void) { return count == 0; }
+int buffer_count(void) { return ram_count; }
+int buffer_is_empty(void) { return ram_count == 0; }

@@ -9,6 +9,6 @@
 // Genera el JSON y lo guarda en el buffer
 // Devuelve 0 si todo salio bien, -1 si hubo error
 int build_json(const EngineData *data, const char *vehicle_id, 
-               long timestamp, char *output_buffer, int buffer_size);
+               long timestamp_relativo, char *output_buffer, int buffer_size);
 
 #endif

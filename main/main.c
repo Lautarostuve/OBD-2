@@ -93,8 +93,8 @@ void app_main(void) {
 
         // Si no tenemos Wi-Fi, el timestamp será el tiempo desde que arrancó el chip.
         // Es un timestamp relativo, pero sirve para ordenar los eventos.
-        long timestamp = time_get_timestamp();
-        buffer_push(&data, VEHICLE_ID, timestamp);
+        long timestamp_relativo = time_get_uptime_ms();
+        buffer_push(&data, VEHICLE_ID, timestamp_relativo);
 
         /* ==========================================
          * FASE 2: DETECCIÓN DE GARAGE (Máquina de Estados)
@@ -118,7 +118,8 @@ void app_main(void) {
 
         if (motor_apagado_count >= PARKED_THRESHOLD_CYCLES) {
             
-            ESP_LOGI(TAG, "Vehículo estacionado confirmado.");
+            ESP_LOGI(TAG, "Vehículo estacionado. Asegurando datos en Flash por seguridad...");
+            buffer_persist_to_flash(); // Una sola escritura al finalizar el viaje.
             
             char saved_ssid[32] = {0};
             char saved_pass[64] = {0};
