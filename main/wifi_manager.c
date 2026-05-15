@@ -1,5 +1,6 @@
 #include "wifi_manager.h"
 #include "esp_log.h"
+#include "nvs.h"
 
 // ============================================================
 // SWITCH DE ENTORNO: 0 para ESP32 físico, 1 para QEMU
@@ -47,6 +48,33 @@ static void event_handler(void *arg, esp_event_base_t event_base,
 }
 #endif
 
+
+static bool wifi_initialized = false;
+
+static void init_wifi_stack(void) {
+    if (!wifi_initialized) {
+        esp_netif_init();
+        esp_event_loop_create_default();
+        
+        esp_netif_create_default_wifi_sta();
+        esp_netif_create_default_wifi_ap();
+
+        wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+        esp_wifi_init(&cfg);
+        
+        esp_event_handler_instance_t instance_any_id;
+        esp_event_handler_instance_t instance_got_ip;
+        esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID,
+                                            &event_handler, NULL, &instance_any_id);
+        esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP,
+                                            &event_handler, NULL, &instance_got_ip);
+        
+        wifi_event_group = xEventGroupCreate();
+        wifi_initialized = true;
+    }
+}
+
+
 int wifi_connect(const char *ssid, const char *password) {
 #if QEMU_SIMULATION_MODE
     ESP_LOGI(TAG, "Simulando conexion a red: %s", ssid);
@@ -54,31 +82,13 @@ int wifi_connect(const char *ssid, const char *password) {
     ESP_LOGI(TAG, "Conexion simulada exitosa");
     return 0;
 #else
-    // 1. Inicializar la memoria Flash no volátil (Obligatorio para Wi-Fi)
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        nvs_flash_erase();
-        nvs_flash_init();
-    }
+    // 1. Nos aseguramos de que el stack TCP/IP esté vivo
+    init_wifi_stack();
     
-    // 2. Configurar el stack TCP/IP y el Wi-Fi
-    wifi_event_group = xEventGroupCreate();
-    esp_netif_init();
-    esp_event_loop_create_default();
-    esp_netif_create_default_wifi_sta();
+    // 2. Frenamos cualquier cosa que estuviera corriendo antes
+    esp_wifi_stop();
     
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    esp_wifi_init(&cfg);
-    
-    // 3. Registrar los callbacks para manejar la conexión
-    esp_event_handler_instance_t instance_any_id;
-    esp_event_handler_instance_t instance_got_ip;
-    esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID,
-                                        &event_handler, NULL, &instance_any_id);
-    esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP,
-                                        &event_handler, NULL, &instance_got_ip);
-    
-    // 4. Configurar credenciales y arrancar
+    // 3. Configurar credenciales y arrancar
     wifi_config_t wifi_config = {0};
     strncpy((char *)wifi_config.sta.ssid, ssid, sizeof(wifi_config.sta.ssid) - 1);
     strncpy((char *)wifi_config.sta.password, password, sizeof(wifi_config.sta.password) - 1);
@@ -120,4 +130,66 @@ void wifi_disconnect(void) {
     connected = 0;
     ESP_LOGI(TAG, "Desconectado del Wi-Fi real");
 #endif
+}
+
+
+// Inicia el Modo Router (Access Point)
+void wifi_start_ap(const char *ap_ssid) {
+#if !QEMU_SIMULATION_MODE
+    init_wifi_stack();
+    esp_wifi_stop(); 
+    
+    wifi_config_t wifi_config = {0};
+    strncpy((char *)wifi_config.ap.ssid, ap_ssid, sizeof(wifi_config.ap.ssid) - 1);
+    wifi_config.ap.ssid_len = strlen(ap_ssid);
+    wifi_config.ap.channel = 1;
+    wifi_config.ap.max_connection = 4;
+    wifi_config.ap.authmode = WIFI_AUTH_OPEN; 
+
+    esp_wifi_set_mode(WIFI_MODE_AP);
+    esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
+    esp_wifi_start();
+    
+    ESP_LOGI(TAG, "Access Point levantado. Red: %s", ap_ssid);
+#endif
+}
+
+// Frena el Modo Router y lo devuelve a modo Cliente
+void wifi_stop_ap(void) {
+#if !QEMU_SIMULATION_MODE
+    esp_wifi_stop();
+    esp_wifi_set_mode(WIFI_MODE_STA);
+    ESP_LOGI(TAG, "Access Point apagado.");
+#endif
+}
+
+// Guarda las credenciales a fuego en el chip
+int wifi_save_credentials(const char *ssid, const char *password) {
+    nvs_handle_t my_handle;
+    esp_err_t err = nvs_open("wifi_creds", NVS_READWRITE, &my_handle);
+    if (err != ESP_OK) return -1;
+
+    nvs_set_str(my_handle, "ssid", ssid);
+    nvs_set_str(my_handle, "pass", password);
+    nvs_commit(my_handle);
+    nvs_close(my_handle);
+    return 0;
+}
+
+// Lee las credenciales del chip. Retorna 0 si las encuentra.
+int wifi_load_credentials(char *ssid, char *password) {
+    nvs_handle_t my_handle;
+    esp_err_t err = nvs_open("wifi_creds", NVS_READONLY, &my_handle);
+    if (err != ESP_OK) return -1;
+
+    size_t required_size;
+    err = nvs_get_str(my_handle, "ssid", NULL, &required_size);
+    if (err == ESP_OK) nvs_get_str(my_handle, "ssid", ssid, &required_size);
+    else { nvs_close(my_handle); return -1; }
+
+    err = nvs_get_str(my_handle, "pass", NULL, &required_size);
+    if (err == ESP_OK) nvs_get_str(my_handle, "pass", password, &required_size);
+    
+    nvs_close(my_handle);
+    return 0;
 }

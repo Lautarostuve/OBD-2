@@ -10,10 +10,12 @@
 #include "data_buffer.h"
 #include "time_manager.h"
 #include "can_driver.h"
+#include "web_server.h"
+#include "nvs_flash.h"
 
 #define WIFI_SSID     "kankel-2.4Ghz"
 #define WIFI_PASSWORD "indio22280"
-#define BACKEND_URL   "https://webhook.site/0ad20dae-8432-4d7a-9a57-112d02a5b900"
+#define BACKEND_URL   "https://webhook.site/df87d0ec-e564-461d-8a13-759e4f49e74b"
 #define VEHICLE_ID    "ABC-123"
 #define MAX_HTTP_RETRIES 3
 
@@ -23,6 +25,12 @@
 static const char *TAG = "main";
 
 void app_main(void) {
+    // Inicializar memoria Flash para guardar credenciales permanentemente
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        nvs_flash_erase();
+        nvs_flash_init();
+    }
 
     buffer_init();
 
@@ -102,98 +110,112 @@ void app_main(void) {
             motor_apagado_count = 0; 
         }
 
+
         /* ==========================================
          * FASE 3: MODO SINCRONIZACIÓN Y SUEÑO PROFUNDO
          * ========================================== */
+
+
         if (motor_apagado_count >= PARKED_THRESHOLD_CYCLES) {
             
-            ESP_LOGI(TAG, "Vehículo estacionado confirmado. Iniciando Modo Sincronización...");
+            ESP_LOGI(TAG, "Vehículo estacionado confirmado.");
             
-            int max_intentos_generales = 10; // Intentará vaciar el buffer hasta 10 veces antes de rendirse (Esto se puede aumentar a mas) (10 es muy poco)
-            int intento_actual = 0;
+            char saved_ssid[32] = {0};
+            char saved_pass[64] = {0};
+            int loaded_from_memory = (wifi_load_credentials(saved_ssid, saved_pass) == 0);
 
-            // BUCLE DE INSISTENCIA: Se queda acá adentro hasta vaciar la memoria o agotar intentos
-            while (!buffer_is_empty() && intento_actual < max_intentos_generales) {
+            // 1. INTENTO DE CAMINO FELIZ (Conectar a lo que sabemos)
+            if (loaded_from_memory) {
+                ESP_LOGI(TAG, "Intentando conectar a red guardada: %s", saved_ssid);
+                wifi_connect(saved_ssid, saved_pass);
+            }
+
+            // 2. PLAN B: PORTAL CAUTIVO
+            if (!wifi_is_connected()) {
+                ESP_LOGW(TAG, "Fallo conexion a red conocida o no hay datos. Levantando Portal Cautivo...");
                 
-                // Si no hay red, intentamos conectar o reconectar
-                if (!wifi_is_connected()) {
-                    ESP_LOGI(TAG, "Buscando red del garage...");
-                    wifi_connect(WIFI_SSID, WIFI_PASSWORD);
+                wifi_start_ap("AutoLog-ABC123");
+                httpd_handle_t web_server_handle = start_webserver();
+                
+                ESP_LOGI(TAG, "Esperando configuracion del celular (Timeout: 3 minutos)...");
+                int wait_timeout = 0;
+                
+                // Espera hasta que lleguen datos o pasen 180 segundos
+                while (!credentials_received && wait_timeout < 180) {
+                    vTaskDelay(pdMS_TO_TICKS(1000));
+                    wait_timeout++;
                 }
 
-                if (wifi_is_connected()) {
-                    // time_sync(); // (Opcional)
+                if (credentials_received) {
+                    ESP_LOGI(TAG, "Cerrando AP e intentando conectar a la nueva red: %s", new_ssid);
+                    if (web_server_handle) httpd_stop(web_server_handle);
+                    wifi_stop_ap();
                     
-                    int items_to_send = buffer_count();
-                    ESP_LOGI(TAG, "Descargando buffer: %d lecturas pendientes (Intento general %d/%d)", 
-                             items_to_send, intento_actual + 1, max_intentos_generales);
+                    // Intentamos conectar con los datos que escribió el usuario
+                    if (wifi_connect(new_ssid, new_pass) == 0) {
+                        ESP_LOGI(TAG, "¡Exito! Guardando credenciales a fuego...");
+                        wifi_save_credentials(new_ssid, new_pass);
+                    } else {
+                        ESP_LOGE(TAG, "La clave nueva era incorrecta. El ciclo aborta para proteger batería.");
+                    }
+                } else {
+                    ESP_LOGE(TAG, "Timeout del Portal Cautivo. Nadie se conecto.");
+                    if (web_server_handle) httpd_stop(web_server_handle);
+                    wifi_stop_ap();
+                }
+            }
 
-                    char json_output[JSON_BUFFER_SIZE];
-                    int successfully_sent = 0;
+            // 3. DESCARGA A LA NUBE (Solo entra si logramos conectarnos en el paso 1 o 2)
+            if (wifi_is_connected()) {
+                
+                int max_intentos_generales = 10;
+                int intento_actual = 0;
 
-                    for (int i = 0; i < items_to_send; i++) {
-                        const BufferedReading *reading = buffer_get(i);
+                while (!buffer_is_empty() && intento_actual < max_intentos_generales) {
+                    
+                    if (!wifi_is_connected()) wifi_connect(saved_ssid, saved_pass);
 
-                        if (build_json(&reading->data, reading->vehicle_id, reading->timestamp, json_output, JSON_BUFFER_SIZE) == 0) {
-                            
-                            int attempt = 0;
-                            int sent_ok = 0;
+                    if (wifi_is_connected()) {
+                        int items_to_send = buffer_count();
+                        ESP_LOGI(TAG, "Descargando buffer: %d lecturas pendientes...", items_to_send);
 
-                            while (attempt < MAX_HTTP_RETRIES && !sent_ok) {
-                                if (http_post_json(BACKEND_URL, json_output) == 0) {
-                                    sent_ok = 1; 
-                                } else {
-                                    attempt++;
-                                    vTaskDelay(pdMS_TO_TICKS(1500)); // Pausa si falla
+                        char json_output[JSON_BUFFER_SIZE];
+                        int successfully_sent = 0;
+
+                        for (int i = 0; i < items_to_send; i++) {
+                            const BufferedReading *reading = buffer_get(i);
+                            if (build_json(&reading->data, reading->vehicle_id, reading->timestamp, json_output, JSON_BUFFER_SIZE) == 0) {
+                                
+                                int attempt = 0, sent_ok = 0;
+                                while (attempt < MAX_HTTP_RETRIES && !sent_ok) {
+                                    if (http_post_json(BACKEND_URL, json_output) == 0) sent_ok = 1; 
+                                    else { attempt++; vTaskDelay(pdMS_TO_TICKS(1500)); }
                                 }
-                            }
 
-                            if (sent_ok) {
-                                successfully_sent++;
-                                // Esta pausa luego hay que sacarla, no tiene sentido en contexto de produccion con un server real.
-                                vTaskDelay(pdMS_TO_TICKS(1000)); 
-                            } else {
-                                ESP_LOGW(TAG, "El servidor rechazó este paquete. Frenando ráfaga actual.");
-                                break; // Rompe el FOR, pero NO el WHILE. 
+                                if (sent_ok) { successfully_sent++; vTaskDelay(pdMS_TO_TICKS(1000)); } 
+                                else { ESP_LOGW(TAG, "Servidor rechazo. Frenando ráfaga."); break; }
                             }
                         }
-                    }
 
-                    if (successfully_sent > 0) {
-                        buffer_remove_first_n(successfully_sent);
-                        ESP_LOGI(TAG, "Se confirmaron %d registros guardados en la nube.", successfully_sent);
+                        if (successfully_sent > 0) buffer_remove_first_n(successfully_sent);
+                        if (buffer_is_empty()) break;
+                        else vTaskDelay(pdMS_TO_TICKS(5000));
                     }
-
-                    if (buffer_is_empty()) {
-                        ESP_LOGI(TAG, "¡Sincronización perfecta! La memoria está limpia.");
-                        break; // Memoria vacía, podemos salir del bucle y dormir felices.
-                    } else {
-                        ESP_LOGW(TAG, "Aún quedan datos en memoria. Reintentando ráfaga en 5 segundos...");
-                        vTaskDelay(pdMS_TO_TICKS(5000)); // Pausa antes de intentar mandar el resto
-                    }
-
-                } else {
-                    ESP_LOGW(TAG, "No hay Wi-Fi disponible. Reintentando en 10 segundos...");
-                    vTaskDelay(pdMS_TO_TICKS(10000));
+                    intento_actual++;
                 }
-                
-                intento_actual++;
             }
 
             // 4. A DORMIR PARA NO GASTAR BATERÍA DEL AUTO
             if (!buffer_is_empty()) {
-                ESP_LOGE(TAG, "Se agotaron los %d intentos y no se pudo vaciar la memoria. Protegiendo batería...", max_intentos_generales);
+                ESP_LOGE(TAG, "Protegiendo batería. Los datos no enviados quedan para el proximo viaje.");
             }
             
             ESP_LOGI(TAG, "Configurando alarma para despertar en 3 minutos...");
-            // La función recibe MICROsegundos.
-            // 180 segundos * 1.000.000. La 'ULL' es para decirle a C que es un número gigante (Unsigned Long Long)
             esp_sleep_enable_timer_wakeup(180 * 1000000ULL);
 
             ESP_LOGI(TAG, "Apagando sistemas. Entrando en Deep Sleep...");
-            if (wifi_is_connected()) {
-                wifi_disconnect(); 
-            }
+            if (wifi_is_connected()) wifi_disconnect(); 
+            
             vTaskDelay(pdMS_TO_TICKS(1000)); 
             esp_deep_sleep_start(); 
         }
